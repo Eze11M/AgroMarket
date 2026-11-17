@@ -80,7 +80,7 @@ contract AgroMKT is Ownable {
     function saleNFT(uint256 _tokenId, uint256 _price) external {
         require(canTrade, "NFT trade closed");
         require(agroNFT.ownerOf(_tokenId) == msg.sender, "Not NFT owner");
-        require(agroNFT.isApprovedForAll(msg.sender, address(this))); // Agregado por recomendación del profe
+        require(agroNFT.isApprovedForAll(msg.sender, address(this)), "Orchestrator not approved for all"); // Agregado por recomendación del profe
         require(_price > 0, "Price must not be zero");
 
         market[_tokenId] = Offer({
