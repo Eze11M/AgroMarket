@@ -1,0 +1,10 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+evm_version = "cancun" # Desperate attempt to safe compatible deploy it
+optimizer = true # Modifies src on deployment time, check for bugs on ETH mainnet submit
+optimizer_runs = 200 # Modifies src on deployment time, check for bugs on ETH mainnet submit
+
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
